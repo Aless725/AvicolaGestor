@@ -182,7 +182,7 @@ public class Home extends javax.swing.JFrame {
     private void BtnPProductosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnPProductosActionPerformed
         // TODO add your handling code here:
         Productos producto = new Productos();
-        ProductoControlador conrolador = new ProductoControlador(producto);
+        ProductoControlador controlador = new ProductoControlador(producto);
         producto.setLocationRelativeTo(null);  // Esto centrará la ventana
         this.setVisible(false);
     }//GEN-LAST:event_BtnPProductosActionPerformed
@@ -223,9 +223,9 @@ public class Home extends javax.swing.JFrame {
     private void BtnVentasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnVentasActionPerformed
         // TODO add your handling code here:
         this.setVisible(false);
-
         Ventas vista = new Ventas();
         VentasControlador controlador = new VentasControlador(vista);
+        vista.setLocationRelativeTo(null);  // Esto centrará la ventana
     }//GEN-LAST:event_BtnVentasActionPerformed
 
     /**

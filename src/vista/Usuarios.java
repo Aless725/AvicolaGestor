@@ -223,6 +223,8 @@ public class Usuarios extends javax.swing.JFrame {
         this.setVisible(false);
         Home vista = new Home();
         vista.setVisible(true);
+        vista.setLocationRelativeTo(null);  // Esto centrará la ventana
+        this.setVisible(false);
     }//GEN-LAST:event_BtnRegresarActionPerformed
 
     /**

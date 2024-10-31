@@ -41,6 +41,7 @@ public class Inventarios extends javax.swing.JFrame {
         BtnActualizar = new javax.swing.JButton();
         BtnEliminar = new javax.swing.JButton();
         BtnLimpiar = new javax.swing.JButton();
+        BtnRegresar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -73,6 +74,13 @@ public class Inventarios extends javax.swing.JFrame {
 
         BtnLimpiar.setText("Limpiar");
 
+        BtnRegresar.setText("Regresar");
+        BtnRegresar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnRegresarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -96,7 +104,10 @@ public class Inventarios extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addComponent(BtnEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(NInventarioTxt, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(NombreInventarioLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(NombreInventarioLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addGap(27, 27, 27)
+                                .addComponent(BtnRegresar, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap(36, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -106,6 +117,9 @@ public class Inventarios extends javax.swing.JFrame {
                 .addComponent(TituloLabel)
                 .addGap(30, 30, 30)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 381, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(34, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(16, 16, 16)
                         .addComponent(NombreInventarioLabel)
@@ -118,9 +132,10 @@ public class Inventarios extends javax.swing.JFrame {
                         .addGap(38, 38, 38)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(BtnActualizar)
-                            .addComponent(BtnAgregar)))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 381, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(34, Short.MAX_VALUE))
+                            .addComponent(BtnAgregar))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(BtnRegresar)
+                        .addGap(48, 48, 48))))
         );
 
         pack();
@@ -129,6 +144,13 @@ public class Inventarios extends javax.swing.JFrame {
     private void NInventarioTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NInventarioTxtActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_NInventarioTxtActionPerformed
+
+    private void BtnRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnRegresarActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        Home vista = new Home();
+        vista.setVisible(true);
+    }//GEN-LAST:event_BtnRegresarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -143,6 +165,7 @@ public class Inventarios extends javax.swing.JFrame {
     private javax.swing.JButton BtnAgregar;
     private javax.swing.JButton BtnEliminar;
     private javax.swing.JButton BtnLimpiar;
+    private javax.swing.JButton BtnRegresar;
     private javax.swing.JTextField NInventarioTxt;
     private javax.swing.JLabel NombreInventarioLabel;
     private javax.swing.JTable TablaDatos;

@@ -7,6 +7,8 @@ package vista;
 import controlador.ClienteControlador;
 import controlador.InventarioControlador;
 import controlador.UsuarioControlador;
+import controlador.VentasControlador;
+import controlador.ProductoControlador;
 
 /**
  *
@@ -35,12 +37,10 @@ public class Home extends javax.swing.JFrame {
         Background = new javax.swing.JPanel();
         PanelGeneral = new javax.swing.JPanel();
         CodeNameLabel = new javax.swing.JLabel();
-        BtnInicio = new javax.swing.JButton();
         BtnFinal = new javax.swing.JButton();
         BtnInventario = new javax.swing.JButton();
         BtnVentas = new javax.swing.JButton();
         BtnUsuarios = new javax.swing.JButton();
-        BtnPerfil = new javax.swing.JButton();
         BtnClientes = new javax.swing.JButton();
         BtnPProductos = new javax.swing.JButton();
 
@@ -55,14 +55,6 @@ public class Home extends javax.swing.JFrame {
         CodeNameLabel.setForeground(new java.awt.Color(255, 255, 255));
         CodeNameLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         CodeNameLabel.setText("AURORA");
-
-        BtnInicio.setText("Inicio");
-        BtnInicio.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        BtnInicio.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BtnInicioActionPerformed(evt);
-            }
-        });
 
         BtnFinal.setText("Cerrar Sesión");
         BtnFinal.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -82,6 +74,11 @@ public class Home extends javax.swing.JFrame {
 
         BtnVentas.setText("Ventas");
         BtnVentas.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        BtnVentas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnVentasActionPerformed(evt);
+            }
+        });
 
         BtnUsuarios.setText("Usuarios");
         BtnUsuarios.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -90,9 +87,6 @@ public class Home extends javax.swing.JFrame {
                 BtnUsuariosActionPerformed(evt);
             }
         });
-
-        BtnPerfil.setText("Mi Perfil");
-        BtnPerfil.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         BtnClientes.setText("Clientes");
         BtnClientes.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -119,30 +113,27 @@ public class Home extends javax.swing.JFrame {
             PanelGeneralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PanelGeneralLayout.createSequentialGroup()
                 .addGap(81, 81, 81)
-                .addGroup(PanelGeneralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(BtnVentas, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(BtnClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(BtnClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(PanelGeneralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PanelGeneralLayout.createSequentialGroup()
-                        .addGap(101, 101, 101)
-                        .addComponent(CodeNameLabel)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(PanelGeneralLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 103, Short.MAX_VALUE)
                         .addGroup(PanelGeneralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(BtnUsuarios, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(BtnPProductos, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(76, 76, 76)
+                            .addGroup(PanelGeneralLayout.createSequentialGroup()
+                                .addGap(101, 101, 101)
+                                .addComponent(CodeNameLabel))
+                            .addGroup(PanelGeneralLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(BtnVentas, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(83, 83, 83)
+                                .addComponent(BtnPProductos, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelGeneralLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 103, Short.MAX_VALUE)
                         .addGroup(PanelGeneralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(BtnInicio, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(BtnInventario, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(BtnFinal)
+                            .addComponent(BtnUsuarios, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(76, 76, 76)
+                        .addComponent(BtnInventario, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(137, 137, 137))))
-            .addGroup(PanelGeneralLayout.createSequentialGroup()
-                .addGap(213, 213, 213)
-                .addComponent(BtnFinal)
-                .addGap(76, 76, 76)
-                .addComponent(BtnPerfil, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         PanelGeneralLayout.setVerticalGroup(
             PanelGeneralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -154,20 +145,13 @@ public class Home extends javax.swing.JFrame {
                     .addComponent(BtnClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(BtnUsuarios, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(BtnInventario, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(PanelGeneralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PanelGeneralLayout.createSequentialGroup()
-                        .addGap(84, 84, 84)
-                        .addGroup(PanelGeneralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(BtnInicio, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(BtnPProductos, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelGeneralLayout.createSequentialGroup()
-                        .addGap(69, 69, 69)
-                        .addComponent(BtnVentas, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(89, 89, 89)
+                .addGap(84, 84, 84)
                 .addGroup(PanelGeneralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(BtnFinal)
-                    .addComponent(BtnPerfil, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(48, 48, 48))
+                    .addComponent(BtnVentas, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BtnPProductos, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(82, 82, 82)
+                .addComponent(BtnFinal)
+                .addGap(55, 55, 55))
         );
 
         javax.swing.GroupLayout BackgroundLayout = new javax.swing.GroupLayout(Background);
@@ -197,6 +181,10 @@ public class Home extends javax.swing.JFrame {
 
     private void BtnPProductosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnPProductosActionPerformed
         // TODO add your handling code here:
+        Productos producto = new Productos();
+        ProductoControlador conrolador = new ProductoControlador(producto);
+        producto.setLocationRelativeTo(null);  // Esto centrará la ventana
+        this.setVisible(false);
     }//GEN-LAST:event_BtnPProductosActionPerformed
 
     private void BtnClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnClientesActionPerformed
@@ -213,11 +201,9 @@ public class Home extends javax.swing.JFrame {
 
     private void BtnFinalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnFinalActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_BtnFinalActionPerformed
+        this.setVisible(false);
 
-    private void BtnInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnInicioActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BtnInicioActionPerformed
+    }//GEN-LAST:event_BtnFinalActionPerformed
 
     private void BtnUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnUsuariosActionPerformed
         Usuarios vista = new Usuarios();
@@ -233,6 +219,14 @@ public class Home extends javax.swing.JFrame {
         vista.setLocationRelativeTo(null);  // Esto centrará la ventana
         this.setVisible(false);
     }//GEN-LAST:event_BtnInventarioActionPerformed
+
+    private void BtnVentasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnVentasActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+
+        Ventas vista = new Ventas();
+        VentasControlador controlador = new VentasControlador(vista);
+    }//GEN-LAST:event_BtnVentasActionPerformed
 
     /**
      * @param args the command line arguments
@@ -274,10 +268,8 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JPanel Background;
     private javax.swing.JButton BtnClientes;
     private javax.swing.JButton BtnFinal;
-    private javax.swing.JButton BtnInicio;
     private javax.swing.JButton BtnInventario;
     private javax.swing.JButton BtnPProductos;
-    private javax.swing.JButton BtnPerfil;
     private javax.swing.JButton BtnUsuarios;
     private javax.swing.JButton BtnVentas;
     private javax.swing.JLabel CodeNameLabel;

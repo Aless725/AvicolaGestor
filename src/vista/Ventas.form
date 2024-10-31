@@ -53,15 +53,20 @@
                               </Group>
                               <EmptySpace max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="BtnEliminar" alignment="1" min="-2" pref="109" max="-2" attributes="0"/>
-                                  <Component id="BtnLimpiar" alignment="1" min="-2" pref="109" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="BtnLimpiar" alignment="1" min="-2" pref="109" max="-2" attributes="0"/>
+                                          <Component id="BtnEliminar" alignment="1" min="-2" pref="109" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Component id="BtnAgregar" pref="106" max="32767" attributes="0"/>
+                                          <Component id="BtnEditar" max="32767" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Component id="BtnRegresar" alignment="1" min="-2" pref="256" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="BtnEditar" max="32767" attributes="0"/>
-                                  <Component id="BtnAgregar" pref="106" max="32767" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="146" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="89" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -87,47 +92,54 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
               <Component id="TituloLbl" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="jScrollPane1" min="-2" pref="367" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="MetodoPagoLable" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="NDocumentoLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="NDocumentoTxt" alignment="0" pref="47" max="32767" attributes="0"/>
-                  <Component id="SelectMetodoPago" max="32767" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="BtnEliminar" alignment="3" max="32767" attributes="0"/>
-                      <Component id="BtnEditar" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-              </Group>
-              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="TDocumentosLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="ProductosLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
                   <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="jScrollPane1" min="-2" pref="367" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="MetodoPagoLable" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="NDocumentoLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="NDocumentoTxt" alignment="0" pref="46" max="32767" attributes="0"/>
+                                  <Component id="SelectMetodoPago" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="TDocumentosLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="ProductosLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="BtnEditar" alignment="3" min="-2" pref="42" max="-2" attributes="0"/>
+                                  <Component id="BtnEliminar" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="BtnAgregar" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="BtnLimpiar" alignment="3" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="SelectTDocumento" pref="35" max="32767" attributes="0"/>
                           <Component id="SelectProductos" max="32767" attributes="0"/>
                       </Group>
-                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="BtnLimpiar" alignment="0" max="32767" attributes="0"/>
-                          <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace max="32767" attributes="0"/>
-                              <Component id="BtnAgregar" min="-2" pref="44" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="BtnRegresar" min="-2" pref="29" max="-2" attributes="0"/>
                   </Group>
               </Group>
+              <EmptySpace pref="69" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -238,6 +250,14 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Limpiar"/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="BtnRegresar">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Regresar"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtnRegresarActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

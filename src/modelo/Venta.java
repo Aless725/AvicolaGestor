@@ -7,22 +7,55 @@ package modelo;
 public class Venta {
 
     private int idVenta;
-    private int idCliente;
+    private String fecha;
+    private String metodoPago;
     private int idUsuario;
-    private String fechaVenta;
-    private double totalVenta;
+    private int idCliente;
+    private String tipoDocumento;
+    private String serieDocumento;
+    private String numeroDocumento;
+    private String rucCliente;
+    private double total;
+    private int idProducto;
+    private int cantidad;
+    private double precioUnitario;
+    private double subtotal;
 
+    //Constructor vacio
     public Venta() {
+
     }
 
-    public Venta(int idVenta, int idCliente, int idUsuario, String fechaVenta, double totalVenta) {
+    //AGREGAR
+    public Venta(String metodoPago, String tipoDocumento, String numeroDocumento, String rucCliente) {
+        this.metodoPago = metodoPago;
+        this.tipoDocumento = tipoDocumento;
+        this.numeroDocumento = numeroDocumento;
+        this.rucCliente = rucCliente;
+
+    }
+
+    //Constructor para agregar (acualizar)
+    public Venta(int idVenta, String fecha, String metodoPago, int idUsuario, int idCliente, String tipoDocumento,
+            String serieDocumento, String numeroDocumento, String rucCliente, double total, int idProducto,
+            int cantidad, double precioUnitario, double subtotal) {
         this.idVenta = idVenta;
-        this.idCliente = idCliente;
+        this.fecha = fecha;
+        this.metodoPago = metodoPago;
         this.idUsuario = idUsuario;
-        this.fechaVenta = fechaVenta;
-        this.totalVenta = totalVenta;
+        this.idCliente = idCliente;
+        this.tipoDocumento = tipoDocumento;
+        this.serieDocumento = serieDocumento;
+        this.numeroDocumento = numeroDocumento;
+        this.rucCliente = rucCliente;
+        this.total = total;
+        this.idProducto = idProducto;
+        this.cantidad = cantidad;
+        this.precioUnitario = precioUnitario;
+        this.subtotal = subtotal;
     }
 
+    //Constructor GGETANDSET
     public int getIdVenta() {
         return idVenta;
     }
@@ -31,12 +64,20 @@ public class Venta {
         this.idVenta = idVenta;
     }
 
-    public int getIdCliente() {
-        return idCliente;
+    public String getFecha() {
+        return fecha;
     }
 
-    public void setIdCliente(int idCliente) {
-        this.idCliente = idCliente;
+    public void setFecha(String fecha) {
+        this.fecha = fecha;
+    }
+
+    public String getMetodoPago() {
+        return metodoPago;
+    }
+
+    public void setMetodoPago(String metodoPago) {
+        this.metodoPago = metodoPago;
     }
 
     public int getIdUsuario() {
@@ -47,19 +88,83 @@ public class Venta {
         this.idUsuario = idUsuario;
     }
 
-    public String getFechaVenta() {
-        return fechaVenta;
+    public int getIdCliente() {
+        return idCliente;
     }
 
-    public void setFechaVenta(String fechaVenta) {
-        this.fechaVenta = fechaVenta;
+    public void setIdCliente(int idCliente) {
+        this.idCliente = idCliente;
     }
 
-    public double getTotalVenta() {
-        return totalVenta;
+    public String getTipoDocumento() {
+        return tipoDocumento;
     }
 
-    public void setTotalVenta(double totalVenta) {
-        this.totalVenta = totalVenta;
+    public void setTipoDocumento(String tipoDocumento) {
+        this.tipoDocumento = tipoDocumento;
+    }
+
+    public String getSerieDocumento() {
+        return serieDocumento;
+    }
+
+    public void setSerieDocumento(String serieDocumento) {
+        this.serieDocumento = serieDocumento;
+    }
+
+    public String getNumeroDocumento() {
+        return numeroDocumento;
+    }
+
+    public void setNumeroDocumento(String numeroDocumento) {
+        this.numeroDocumento = numeroDocumento;
+    }
+
+    public String getRucCliente() {
+        return rucCliente;
+    }
+
+    public void setRucCliente(String rucCliente) {
+        this.rucCliente = rucCliente;
+    }
+
+    public double getTotal() {
+        return total;
+    }
+
+    public void setTotal(double total) {
+        this.total = total;
+    }
+
+    public int getIdProducto() {
+        return idProducto;
+    }
+
+    public void setIdProducto(int idProducto) {
+        this.idProducto = idProducto;
+    }
+
+    public int getCantidad() {
+        return cantidad;
+    }
+
+    public void setCantidad(int cantidad) {
+        this.cantidad = cantidad;
+    }
+
+    public double getPrecioUnitario() {
+        return precioUnitario;
+    }
+
+    public void setPrecioUnitario(double precioUnitario) {
+        this.precioUnitario = precioUnitario;
+    }
+
+    public double getSubtotal() {
+        return subtotal;
+    }
+
+    public void setSubtotal(double subtotal) {
+        this.subtotal = subtotal;
     }
 }
